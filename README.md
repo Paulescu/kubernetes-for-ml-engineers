@@ -190,7 +190,7 @@ Before we can deploy our app to the cluster, we need to push the Docker image to
 To do that, we will use the `kind` CLI to load the image into the cluster.
 
 ```bash
-kind load docker-image simple-api:v1.0.0
+kind load docker-image simple-api:v1.0.0 --name cluster-123
 ```
 
 #### 7. Deploy the app as a Kubernetes service
