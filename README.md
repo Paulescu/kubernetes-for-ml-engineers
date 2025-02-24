@@ -122,12 +122,12 @@ We will use `uv` to create the project, which is the most ergonomic way to creat
 
 1. Create the boilerplate code with:
     ```bash
-    uv new simple-api
+    uv init simple-api
     ```
 
 2. Add FastAPI to the project:
     ```bash
-    uv add fastapi[standard]
+    uv add fastapi --extra standard
     ```
 
 3. Rename the `hello.py` file to `api.py` and copy this code:
@@ -149,7 +149,8 @@ Feel free to adjust this code to your needs.
 
 #### 4. Containerize your app with Docker
 
-We write a [multi-stage Dockerfile](./Dockerfile) to reduce the final image size.
+We write a [multi-stage Dockerfile](./Dockerfile) to reduce the final image size. 
+Change the python version to that one in your .venv environment.
 
 It has 2 stages:
 
